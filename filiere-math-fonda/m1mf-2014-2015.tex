@@ -1,8 +1,7 @@
 \documentclass{beamer}
 
-
+\usepackage{amsmath,amsfonts}
 \usepackage[math]{fontspec}
-\usepackage{unicode-math}
 \setmathfont{Asana-Math.otf}
 \usepackage{fontenc}
 \setmainfont{Droid Serif}
@@ -38,10 +37,17 @@
     \end{itemize}
   \end{block}
   \begin{block}{Objets}
-    Les espaces $H^s$
+    Étant donné $\Omega \subset \mathbb{R}^d, d=1,2,3$, les espaces $H^s(\Omega)$
     \begin{equation*}
-      H^s = \{ \}
+      H^s(\Omega)=\{ u \in L^2(\Omega)~|~\forall\alpha\text{ tel que }|\alpha|\le s,~D^\alpha u\in L^2(\Omega)\}
     \end{equation*}
+  \end{block}
+  \begin{block}{Questions}
+    \begin{itemize}
+    \item Propriétés de ces espaces
+    \item Applications aux EDP: cadre fonctionel pour montrer
+      l'existence et unicité de solutions
+    \end{itemize}
   \end{block}
 \end{frame}
 
