@@ -1,14 +1,13 @@
 \documentclass{beamer}
 
 \usepackage{amsmath,amsfonts}
-%\usepackage[math]{fontspec}
-%\setmathfont{Asana-Math.otf}
-\usepackage{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 %\setmainfont{Droid Serif}
 
 \mode<presentation>
 {
-\usetheme{PaloAlto}
+%\usetheme{PaloAlto}
 %\useoutertheme{tree}
 \usecolortheme{lily}
 \useinnertheme{rectangles}
@@ -27,8 +26,7 @@
 
 \section{Analyse Fonctionnelle Avanc{\'e}e et Applications aux EDP}
 
-\begin{frame}\frametitle{Analyse Fonctionnelle Avanc{\'e}e et Applications
-    aux EDP}
+\begin{frame}\frametitle{Analyse Fonctionnelle Avancée et  EDP}
   \begin{block}{Objectifs}
     \begin{itemize}
     \item Pr{\'e}paration du M2MF 2015-2016
@@ -51,14 +49,56 @@
   \end{block}
 \end{frame}
 
-\section{M{\'e}thodes Num{\'e}riques pour les EDP}
+\begin{frame}\frametitle{Analyse Fonctionnelle Avancée et EDP}
 
-\begin{frame}{M{\'e}thodes Num{\'e}riques pour les EDP}
+  \begin{block}{Quelques exemples d'EDP: probl\`emes d'\'evolution}
 
-Motivations ici pour les EDP (video/images)...
+Evolution d'une solution en temps $t$ sur un domaine $\Omega$. La solution est donn\'ee implicitement par une \'equation, des conditions limites (au bord du domaine)
+et une donn\'ee initiale. Formalisation sous la forme
+$$
+\frac{d u}{dt}+Au = 0,\ u(0) = u_0
+$$
+
+{\bf Equation de la chaleur:} mod\'elise la distribution de temp\'erature $u$ dans un domaine $\Omega$ \`a l'instant $t$
+
+$$
+\partial_t u -\Delta u = 0
+$$
+
+{\bf Equation des ondes:} mod\'elise %les petites vibrations d'une corde (en dimension $1$) ou d'une membrane \'elastique (en dimension $2$), ou plus g\'en\'eralement
+la propagation d'une onde (acoustique, \'electromagn\'etique...)
+
+$$
+\partial_t^2u-\Delta u = 0
+$$
+
+R\'ef\'erence: Ha\"im Brezis, Analyse Fonctionnelle
+
+  \end{block}
+
 
 \end{frame}
+
+
+\section{Méthodes Numériques pour les EDP}
+
 \begin{frame}{M{\'e}thodes Num{\'e}riques pour les EDP}
+
+
+  \begin{columns}
+    \column{.5\linewidth}
+    \includegraphics[width=0.9\linewidth]{gysela.png}\\
+    \includegraphics[width=0.4\linewidth]{Radial_magnet.jpg}
+    \includegraphics[width=0.4\linewidth]{temperature.jpg}
+    \column{.5\linewidth}
+    \centerline{\includegraphics[width=9\linewidth]{MesoChallengePressure2.png}}\\
+  \end{columns}
+
+
+
+
+\end{frame}
+\begin{frame}{Méthodes Numériques pour les EDP: Rao \& Prud'homme}
   \begin{block}{Objectifs}
     \begin{itemize}
     \item {\'E}tude math{\'e}matique et num{\'e}rique de la m{\'e}thode des {\'e}l{\'e}ments
@@ -77,5 +117,26 @@ Motivations ici pour les EDP (video/images)...
     \item Impl{\'e}mentation de la m{\'e}thode et V{\'e}rification num{\'e}riques des th{\'e}or{\`e}mes
     \end{itemize}
   \end{block}
+\end{frame}
+
+\begin{frame}{Vers le M2}
+
+  \begin{block}{M2R Analyse 2015-2016}
+    \begin{itemize}
+    \item Systèmes hyperboliques (B. Rao, P. Helluy)
+    \item Réductions de modèles.
+      \begin{itemize}
+      \item Méthode des bases réduites (C. Prud'homme)
+      \item Méthode d'homogénéisation (S. Hirstoaga)
+      \end{itemize}
+    \item Théorie et approximation des EDP paraboliques
+      \begin{itemize}
+      \item Théorie et approximation (Z. Belhachmi)
+      \item Application à l'interaction
+        fluide-structure (C. Murea)
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+
 \end{frame}
 \end{document}
